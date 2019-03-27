@@ -22,7 +22,37 @@
     <ol>
       <li><a href="1.html">PLOT</li></a>
       <li><a href="2.html">DIRECTOR</li></a>
-      <li><a href="3.html" style="color:blue; text-decoration:underline;">CAST</li></a>
+      <li><a href="3.html" style="text-decoration:underline; font-weight:bold;">CAST</li></a>
+
+      <input type="button" value="NIGHT" onclick="
+      var target1 = document.querySelector('body');
+      var target2 = document.querySelector('#article');
+      if (this.value === 'NIGHT') {
+        target1.style.backgroundColor = 'black';
+        target2.style.color = 'white';
+        this.value = 'DAY';
+
+        var alist = document.querySelectorAll('a');
+        var i = 0;
+        while (i < alist.length) {
+          alist[i].style.color='pink';
+          i = i + 1;
+        }
+
+      } else {
+        target1.style.backgroundColor = 'white';
+        target2.style.color = 'black';
+        this.value = 'NIGHT';
+
+        var alist = document.querySelectorAll('a');
+        var i = 0;
+        while (i < alist.length) {
+          alist[i].style.color='skyblue';
+          i = i + 1;
+        }
+      }
+      ">
+
     </ol>
     <div id="article">
       <h2>Cast</h2>
